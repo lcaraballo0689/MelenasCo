@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Sitemap generado para https://www.melenasco.com/ -->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <!-- Página principal -->
+  <url>
+    <loc>https://www.melenasco.com/</loc>
+    <lastmod>2025-02-01</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <!-- Página de productos -->
+  <url>
+    <loc>https://www.melenasco.com/productos/</loc>
+    <lastmod>2025-02-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Página de garantias -->
+  <url>
+    <loc>https://www.melenasco.com/garantias/</loc>
+    <lastmod>2025-02-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Página "certificado" -->
+  <url>
+    <loc>https://www.melenasco.com/certificado/</loc>
+    <lastmod>2025-02-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+  <!-- Página de poliza -->
+  <url>
+    <loc>https://www.melenasco.com/poliza/</loc>
+    <lastmod>2025-02-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+</urlset>

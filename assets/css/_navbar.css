@@ -1,0 +1,65 @@
+/* Estilo para el navbar */
+#navbar {
+    background-color: rgba(0, 0, 0, 0.8);
+    /* Fondo oscuro con algo de transparencia */
+    padding: 10px 20px;
+    position: fixed;
+    top: -80px;
+    /* Establece el navbar fuera de la vista inicialmente */
+    width: 100%;
+    opacity: 0;
+    /* Inicialmente el navbar está invisible */
+    transition: opacity 0.8s ease-in-out, top 0.3s ease-in-out;
+    /* Suave transición cuando aparece */
+    z-index: 9999;
+    /* Asegura que el navbar esté sobre otros elementos */
+}
+
+.navbar-logo {
+    width: 120px;
+    height: auto;
+}
+
+/* Estilo adicional para los enlaces o los elementos del navbar */
+.navbar a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 18px;
+}
+
+/* Estilo para el título principal */
+.main-title {
+    color: #f4c10f;
+    font-size: 2rem;
+    font-weight: bold;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    /* Sombra para el título */
+    animation: fadeInUp 1s ease-in-out;
+}
+
+/* Efecto de animación de desvanecimiento hacia arriba */
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Estilo de los métodos de pago */
+.payment-methods {
+    margin-top: 30px;
+    font-size: 1.1rem;
+    color: white;
+}
+
+.payment-icon {
+    width: 60px;
+    height: auto;
+    margin: 10px;
+}

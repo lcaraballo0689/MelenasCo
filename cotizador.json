@@ -1,0 +1,254 @@
+{
+    "dentro_bogota": {
+        "60cm": {
+            "1": {
+                "envio": 12000,
+                "caja": 15000,
+                "extension": 12000,
+                "publicidad": 10000,
+                "valor_venta_min": 74000,
+                "valor_venta_max": 89990,
+                "ganancia": 25000,
+                "precio_por_unidad": 89990
+            },
+            "2": {
+                "envio": 15000,
+                "caja": 15000,
+                "extension": 24000,
+                "publicidad": 20000,
+                "valor_venta_min": 124000,
+                "valor_venta_max": 149000,
+                "ganancia": 50000,
+                "precio_por_unidad": 74500
+            },
+            "3": {
+                "envio": 18000,
+                "caja": 15000,
+                "extension": 36000,
+                "publicidad": 30000,
+                "valor_venta_min": 174000,
+                "valor_venta_max": 199000,
+                "ganancia": 75000,
+                "precio_por_unidad": 66333
+            },
+            "4": {
+                "envio": 21000,
+                "caja": 30000,
+                "extension": 48000,
+                "publicidad": 40000,
+                "valor_venta_min": 239000,
+                "valor_venta_max": 264000,
+                "ganancia": 100000,
+                "precio_por_unidad": 66000
+            },
+            "5": {
+                "envio": 24000,
+                "caja": 30000,
+                "extension": 60000,
+                "publicidad": 50000,
+                "valor_venta_min": 289000,
+                "valor_venta_max": 314000,
+                "ganancia": 125000,
+                "precio_por_unidad": 62800
+            },
+            "6": {
+                "envio": 27000,
+                "caja": 30000,
+                "extension": 72000,
+                "publicidad": 60000,
+                "valor_venta_min": 339000,
+                "valor_venta_max": 364000,
+                "ganancia": 150000,
+                "precio_por_unidad": 60667
+            }
+        },
+        "70cm": {
+            "1": {
+                "envio": 14000,
+                "caja": 15000,
+                "extension": 33000,
+                "publicidad": 10000,
+                "valor_venta_min": 83000,
+                "valor_venta_max": 98000,
+                "ganancia": 25000,
+                "precio_por_unidad": 98000
+            },
+            "2": {
+                "envio": 16000,
+                "caja": 15000,
+                "extension": 45000,
+                "publicidad": 20000,
+                "valor_venta_min": 133000,
+                "valor_venta_max": 158000,
+                "ganancia": 50000,
+                "precio_por_unidad": 79000
+            },
+            "3": {
+                "envio": 18000,
+                "caja": 15000,
+                "extension": 57000,
+                "publicidad": 30000,
+                "valor_venta_min": 183000,
+                "valor_venta_max": 208000,
+                "ganancia": 75000,
+                "precio_por_unidad": 69333
+            },
+            "4": {
+                "envio": 20000,
+                "caja": 30000,
+                "extension": 69000,
+                "publicidad": 40000,
+                "valor_venta_min": 248000,
+                "valor_venta_max": 273000,
+                "ganancia": 100000,
+                "precio_por_unidad": 68250
+            },
+            "5": {
+                "envio": 22000,
+                "caja": 30000,
+                "extension": 81000,
+                "publicidad": 50000,
+                "valor_venta_min": 298000,
+                "valor_venta_max": 323000,
+                "ganancia": 125000,
+                "precio_por_unidad": 64600
+            },
+            "6": {
+                "envio": 24000,
+                "caja": 30000,
+                "extension": 93000,
+                "publicidad": 60000,
+                "valor_venta_min": 348000,
+                "valor_venta_max": 373000,
+                "ganancia": 150000,
+                "precio_por_unidad": 62167
+            }
+        }
+    },
+    "fuera_bogota": {
+        "60cm": {
+            "1": {
+                "envio": 40000,
+                "caja": 15000,
+                "extension": 12000,
+                "publicidad": 10000,
+                "valor_venta_min": 102000,
+                "valor_venta_max": 114990,
+                "ganancia": 25000,
+                "precio_por_unidad": 114990
+            },
+            "2": {
+                "envio": 43000,
+                "caja": 15000,
+                "extension": 24000,
+                "publicidad": 20000,
+                "valor_venta_min": 152000,
+                "valor_venta_max": 177000,
+                "ganancia": 50000,
+                "precio_por_unidad": 88500
+            },
+            "3": {
+                "envio": 46000,
+                "caja": 15000,
+                "extension": 36000,
+                "publicidad": 30000,
+                "valor_venta_min": 202000,
+                "valor_venta_max": 227000,
+                "ganancia": 75000,
+                "precio_por_unidad": 75667
+            },
+            "4": {
+                "envio": 49000,
+                "caja": 30000,
+                "extension": 48000,
+                "publicidad": 40000,
+                "valor_venta_min": 267000,
+                "valor_venta_max": 292000,
+                "ganancia": 100000,
+                "precio_por_unidad": 73000
+            },
+            "5": {
+                "envio": 52000,
+                "caja": 30000,
+                "extension": 60000,
+                "publicidad": 50000,
+                "valor_venta_min": 317000,
+                "valor_venta_max": 342000,
+                "ganancia": 125000,
+                "precio_por_unidad": 68400
+            },
+            "6": {
+                "envio": 55000,
+                "caja": 30000,
+                "extension": 72000,
+                "publicidad": 60000,
+                "valor_venta_min": 367000,
+                "valor_venta_max": 392000,
+                "ganancia": 150000,
+                "precio_por_unidad": 65333
+            }
+        },
+        "70cm": {
+            "1": {
+                "envio": 42000,
+                "caja": 15000,
+                "extension": 33000,
+                "publicidad": 10000,
+                "valor_venta_min": 125000,
+                "valor_venta_max": 150000,
+                "ganancia": 25000,
+                "precio_por_unidad": 150000
+            },
+            "2": {
+                "envio": 45000,
+                "caja": 15000,
+                "extension": 66000,
+                "publicidad": 20000,
+                "valor_venta_min": 196000,
+                "valor_venta_max": 221000,
+                "ganancia": 50000,
+                "precio_por_unidad": 110500
+            },
+            "3": {
+                "envio": 48000,
+                "caja": 15000,
+                "extension": 99000,
+                "publicidad": 30000,
+                "valor_venta_min": 267000,
+                "valor_venta_max": 292000,
+                "ganancia": 75000,
+                "precio_por_unidad": 97333
+            },
+            "4": {
+                "envio": 51000,
+                "caja": 30000,
+                "extension": 132000,
+                "publicidad": 40000,
+                "valor_venta_min": 353000,
+                "valor_venta_max": 378000,
+                "ganancia": 100000,
+                "precio_por_unidad": 94500
+            },
+            "5": {
+                "envio": 54000,
+                "caja": 30000,
+                "extension": 165000,
+                "publicidad": 50000,
+                "valor_venta_min": 424000,
+                "valor_venta_max": 449000,
+                "ganancia": 125000,
+                "precio_por_unidad": 89800
+            },
+            "6": {
+                "envio": 57000,
+                "caja": 30000,
+                "extension": 198000,
+                "publicidad": 60000,
+                "valor_venta_min": 495000,
+                "valor_venta_max": 520000,
+                "ganancia": 150000,
+                "precio_por_unidad": 86667
+            }
+        }
+    }
+}

@@ -1,0 +1,13 @@
+# robots.txt para https://www.melenasco.com/
+
+# Bloquea el acceso a directorios sensibles o de administración
+User-agent: *
+Disallow: /admin/
+Disallow: /login/
+Disallow: /private/
+
+# Permite el acceso al resto del sitio
+Allow: /
+
+# Indica la ubicación del sitemap para ayudar a la indexación
+Sitemap: https://www.melenasco.com/sitemap.xml

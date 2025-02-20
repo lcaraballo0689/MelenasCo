@@ -1,0 +1,199 @@
+/* --- GENERALES --- */
+:root {
+    --bs-primary: #5e2e99; /* Un morado mas corporativo */
+    --bs-primary-rgb: 94, 46, 153;
+    --bs-secondary: #6c757d; /* Gris oscuro para textos secundarios */
+    --bs-secondary-rgb: 108, 117, 125;
+    --bs-success: #198754; /* Verde para las acciones positivas */
+    --bs-success-rgb: 25, 135, 84;
+    --bs-light: #f8f9fa; /* Gris claro para fondos */
+    --bs-light-rgb: 248, 249, 250;
+    --bs-dark: #212529; /* Negro para textos en fondos claros */
+    --bs-dark-rgb: 33, 37, 41;
+    --bs-font-sans-serif: 'Roboto', sans-serif; /* Tipografía principal */
+}
+
+html {
+    scroll-padding-top: 76px; /* Altura de la barra de navegación */
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--bs-font-sans-serif);
+    font-size: 1rem;
+    line-height: 1.6;
+    color: var(--bs-dark);
+    background-color: var(--bs-light);
+}
+
+.section {
+    padding: 5rem 0;
+}
+
+.section-title {
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: var(--bs-primary);
+}
+
+/* --- UTILIDADES --- */
+.text-primary {
+    color: var(--bs-primary) !important;
+}
+
+.bg-light {
+    background-color: var(--bs-light) !important;
+}
+
+/* --- BOTONES --- */
+.btn-primary {
+    --bs-btn-color: #fff;
+    --bs-btn-bg: var(--bs-primary);
+    --bs-btn-border-color: var(--bs-primary);
+    --bs-btn-hover-color: #fff;
+    --bs-btn-hover-bg: #4a237a; /* Un tono más oscuro de morado al pasar el ratón */
+    --bs-btn-hover-border-color: #4a237a;
+    --bs-btn-focus-shadow-rgb: 225, 217, 235; /* Sombra más clara para el focus */
+    --bs-btn-active-color: #fff;
+    --bs-btn-active-bg: #36185e; /* Tono aún más oscuro al hacer clic */
+    --bs-btn-active-border-color: #36185e;
+    --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+    --bs-btn-disabled-color: #fff;
+    --bs-btn-disabled-bg: var(--bs-primary);
+    --bs-btn-disabled-border-color: var(--bs-primary);
+}
+
+.btn-outline-secondary {
+    --bs-btn-color: var(--bs-secondary);
+    --bs-btn-border-color: var(--bs-secondary);
+    --bs-btn-hover-color: #fff;
+    --bs-btn-hover-bg: var(--bs-secondary);
+    --bs-btn-hover-border-color: var(--bs-secondary);
+    --bs-btn-focus-shadow-rgb: 108, 117, 125;
+    --bs-btn-active-color: #fff;
+    --bs-btn-active-bg: var(--bs-secondary);
+    --bs-btn-active-border-color: var(--bs-secondary);
+    --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+    --bs-btn-disabled-color: var(--bs-secondary);
+    --bs-btn-disabled-bg: transparent;
+    --bs-btn-disabled-border-color: var(--bs-secondary);
+    --bs-gradient: none;
+}
+
+.btn-success {
+    --bs-btn-color: #fff;
+    --bs-btn-bg: var(--bs-success);
+    --bs-btn-border-color: var(--bs-success);
+    --bs-btn-hover-color: #fff;
+    --bs-btn-hover-bg: #136840;
+    --bs-btn-hover-border-color: #136840;
+    --bs-btn-focus-shadow-rgb: 60, 153, 110;
+    --bs-btn-active-color: #fff;
+    --bs-btn-active-bg: #0e4e2f;
+    --bs-btn-active-border-color: #0e4e2f;
+    --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+    --bs-btn-disabled-color: #fff;
+    --bs-btn-disabled-bg: var(--bs-success);
+    --bs-btn-disabled-border-color: var(--bs-success);
+}
+
+/* --- NAVEGACIÓN --- */
+.navbar {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+.navbar-brand-img {
+    height: 40px;
+}
+
+.navbar-nav .nav-link {
+    font-weight: 500;
+    color: var(--bs-dark);
+    transition: color 0.3s ease-in-out;
+}
+
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link:focus,
+.navbar-nav .nav-link.active {
+    color: var(--bs-primary);
+}
+
+.navbar-toggler {
+    border: none;
+}
+
+.navbar-toggler:focus {
+    box-shadow: 0 0 0 3px rgba(var(--bs-primary-rgb), 0.25);
+}
+
+/* --- HERO --- */
+.hero {
+    background-color: #f8f9fa;
+    padding: 4rem 0;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-content {
+    max-width: 600px;
+    margin: 0 auto;
+    z-index: 2;
+    position: relative;
+}
+
+.hero-title {
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: var(--bs-dark);
+}
+
+.hero-subtitle {
+    font-size: 1.25rem;
+    margin-bottom: 2rem;
+    color: var(--bs-secondary);
+}
+
+.hero-image {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(25%);
+    width: 50%;
+    height: 100%;
+    z-index: 1;
+}
+
+.hero-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+@media (max-width: 991.98px) {
+    .hero-image {
+        display: none;
+    }
+
+    .hero-content {
+        max-width: 100%;
+    }
+}
+
+/* --- PRODUCTOS --- */
+#galleryContent .card {
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+#galleryContent .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* --- FOOTER --- */
+footer {
+    margin-top: 3rem;
+}

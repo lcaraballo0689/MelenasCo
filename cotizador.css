@@ -1,0 +1,13 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    max-width: 600px;
+}
+
+#resultado {
+    background-color: #f8f9fa;
+    padding: 15px;
+    border-radius: 10px;
+}

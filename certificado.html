@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Certificado de Autenticidad</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    /* Estilos - Mantenemos los estilos anteriores sin cambios */
+    body {
+      background-color: #f8f8f8;
+      font-family: 'Montserrat', sans-serif;
+      color: #333;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      margin: 0;
+    }
+
+    .certificate-container {
+      width: 90%; /* Ajuste para mejor visualización en dispositivos móviles */
+      max-width: 800px;
+      padding: 30px;
+      background-color: #fff;
+      border-radius: 15px;
+      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+      position: relative;
+      border: 2px solid #eee;
+      font-size: 14px;
+      overflow: hidden; /* Evita que el sello se salga del contenedor */
+    }
+
+    .certificate-header {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .certificate-header img {
+      max-height: 100px;
+      margin-bottom: 10px;
+    }
+
+    h1 {
+      font-size: 28px;
+      font-weight: 700;
+      color: #2c3e50;
+      margin-bottom: 10px;
+    }
+
+    p {
+      line-height: 1.6; /* Mejor espaciado entre líneas */
+      font-size: 14px;
+      margin-bottom: 8px;
+    }
+
+    .details-section {
+      margin-bottom: 25px; /* Mayor espacio entre secciones */
+    }
+
+    .details-section p {
+      margin-bottom: 5px;
+      display: flex; /* Mejora alineación de texto */
+      align-items: center;
+    }
+    
+    .details-section p strong {
+      min-width: 150px; /* Ancho fijo para los labels */
+    }
+
+    h2 {
+      font-size: 20px;
+      font-weight: 600;
+      color: #3498db;
+      margin-bottom: 15px;
+      border-bottom: 1px solid #eee;
+      padding-bottom: 10px;
+    }
+
+    ul {
+      padding-left: 25px;
+      font-size: 14px;
+      list-style-type: disc;
+      margin-bottom: 15px;
+    }
+
+    .signature-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      margin-top: 30px;
+    }
+
+    .signature {
+      text-align: right;
+    }
+
+    .signature-line {
+      width: 250px;
+      border-top: 1px solid #7f8c8d;
+      margin: 0 0 10px 0; /* Ajuste de margen */
+    }
+    
+    .iso-logo {
+      width: 250px; /* Ajuste tamaño ISO */
+      margin-bottom: 20px;
+    }
+
+    .signature-img {
+      width: 200px;
+      margin-top: -30px;
+      margin-bottom: 10px;
+    }
+
+    .seal {
+        position: absolute;
+        bottom: -30px; /* Ajuste para que se vea la mitad */
+        left: -30px; /* Ajuste para que se vea la mitad */
+        width: 140px;
+        height: 140px;
+        background-image: url('topbar.png'); /* Asegúrate de tener la imagen correcta */
+        background-size: cover;
+        border-radius: 50%;
+        border: 3px solid #fff;
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
+        z-index: -1;
+    }
+
+    .btn-download-container {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      z-index: 100; /* Asegura que esté por encima de otros elementos */
+    }
+
+    .btn-download {
+      display: block;
+      /* Eliminamos el margen automático */
+      /* margin: 30px auto 0; */
+      padding: 12px 25px;
+      background-color: #3498db;
+      color: #fff;
+      font-weight: 600;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      text-transform: uppercase;
+      transition: background-color 0.3s ease;
+      font-size: 14px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Añadimos una sombra para que resalte */
+    }
+
+    .btn-download:hover {
+      background-color: #2980b9;
+    }
+
+    .error-message {
+      text-align: center;
+      color: #D8000C;
+      background-color: #FFBABA;
+      padding: 20px;
+      border-radius: 8px;
+      border: 1px solid #D8000C;
+    }
+
+    @media (max-width: 768px) {
+        .certificate-container {
+            padding: 20px;
+            font-size: 13px;
+        }
+        h1 {
+            font-size: 24px;
+        }
+        p, ul {
+            font-size: 13px;
+        }
+        .details-section p strong {
+            min-width: 120px;
+        }
+        .seal {
+            width: 100px;
+            height: 100px;
+            bottom: -20px;
+            left: -20px;
+        }
+        .iso-logo {
+            width: 180px;
+        }
+        .signature-img {
+            width: 150px;
+        }
+        .btn-download-container {
+            bottom: 10px;
+            right: 10px;
+        }
+        .btn-download{
+            font-size: 12px;
+            padding: 10px 20px;
+        }
+    }
+  </style>
+</head>
+<body>
+  <div id="content">
+    </div>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const params = new URLSearchParams(window.location.search);
+      const container = document.getElementById("content");
+      const certificateNumber = params.get('certificateNumber');
+
+      if (certificateNumber) {
+        // Realizar la consulta a la base de datos usando el servicio Go
+        fetch(`https://api.melenasco.com/obtener_certificado?certificateNumber=${certificateNumber}`)
+          .then(response => {
+            if (!response.ok) {
+              throw new Error('Error en la respuesta del servidor');
+            }
+            return response.json();
+          })
+          .then(data => {
+            if (data.error) {
+              throw new Error(data.error);
+            }
+            // Crear el certificado con los datos obtenidos
+            const certificateHTML = `
+              <div class="certificate-container" id="certificate">
+                <div class="seal"></div>
+                <div class="certificate-header">
+                  <img src="/assets/public/logo.svg" alt="Logo de Melenas">
+                  <h1>Certificado de Autenticidad</h1>
+                  <p>Este documento certifica la autenticidad de los productos adquiridos de <strong>Melenas Co</strong>, garantizando su calidad y cumplimiento con los estándares más exigentes.</p>
+                </div>
+
+                <div class="details-section">
+                  <h2>Detalles del Cliente</h2>
+                  <p><strong>Nombre:</strong> <span id="client-name">${data.nombre_cliente} ${data.apellido_cliente}</span></p>
+                  <p><strong>Producto:</strong> <span id="product-name">${data.nombre_producto}</span></p>
+                  <p><strong>Descripción:</strong> <span id="product-description">${data.descripcion_producto}</span></p>
+                  <p><strong>Tipo de Cabello:</strong> <span id="product-hair-type">${data.tipo_cabello}</span></p>
+                  <p><strong>Color:</strong> <span id="product-color">${data.color}</span></p>
+                  <p><strong>Longitud:</strong> <span id="product-length">${data.longitud}</span></p>
+                  <p><strong>Fecha de compra:</strong> <span id="purchase-date">${formatDate(data.fecha_compra)}</span></p>
+                  <p><strong>Fecha de emisión:</strong> <span id="issue-date">${formatDate(data.fecha_emision)}</span></p>
+                  <p><strong>Número de certificado:</strong> <span id="certificate-number">${data.numero_certificado}</span></p>
+                </div>
+
+                <div class="details-section">
+                  <h2>Instrucciones de Cuidado</h2>
+                  <p>Para prolongar la durabilidad y mantener la belleza de tu producto Melenas Co, te recomendamos seguir estas instrucciones de cuidado:</p>
+                  <ul>
+                    <li>Evite la exposición prolongada a agua salada o clorada, ya que puede alterar las características del cabello.</li>
+                    <li>Utilice peines de dientes anchos o cepillos especiales para extensiones al peinar, comenzando desde las puntas y avanzando hacia la raíz para evitar tirones.</li>
+                    <li>Guarde el producto en un lugar seco y limpio, preferiblemente en un soporte para extensiones o en su empaque original, para mantener su forma y evitar enredos.</li>
+                    <li>Lave el producto según sea necesario con los productos recomendados por Melenas Co, utilizando movimientos suaves y sin frotar.</li>
+                  </ul>
+                </div>
+
+                <div class="signature-container">
+                    <div>
+                        <img class="iso-logo" src="/assets/public/iso.png" alt="Certificación ISO">
+                    </div>
+                    <div class="signature">
+                        <img class="signature-img" src="/assets/public/firma.png" alt="Firma Autorizada">
+                        <div class="signature-line"></div>
+                        <p>Firma Autorizada</p>
+                    </div>
+                </div>
+              </div>
+              <div class="btn-download-container">
+                <button class="btn-download" onclick="downloadPDF()">Descargar Certificado</button>
+              </div>
+            `;
+            container.innerHTML = certificateHTML;
+          })
+          .catch(error => {
+            console.error('Error:', error);
+            container.innerHTML = `<div class="error-message">Error al obtener los datos del certificado. ${error.message}</div>`;
+          });
+      } else {
+        // Redirigir a index.html
+        window.location.href = "index.html";
+      }
+    });
+
+    function downloadPDF() {
+      const element = document.getElementById("certificate");
+
+      const options = {
+        margin: [10, 10, 10, 10],
+        filename: 'certificado_autenticidad.pdf',
+        image: { type: 'jpeg', quality: 0.98 },
+        html2canvas: { scale: 2, logging: false },
+        jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' }
+      };
+
+      html2pdf().set(options).from(element).save();
+    }
+
+    function formatDate(dateString) {
+        const date = new Date(dateString);
+        const day = date.getDate().toString().padStart(2, '0');
+        const month = (date.getMonth() + 1).toString().padStart(2, '0');
+        const year = date.getFullYear();
+        return `${day}/${month}/${year}`;
+    }
+  </script>
+
+</body>
+</html>

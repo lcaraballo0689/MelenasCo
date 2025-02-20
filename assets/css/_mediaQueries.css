@@ -1,0 +1,15 @@
+@media (max-width:768px) {
+    .content h1 {
+        font-size: 2rem;
+    }
+
+    .content p {
+        font-size: 1rem;
+        max-width: 90%;
+    }
+
+    .btn-custom {
+        font-size: 1rem;
+        padding: 0.6rem 1.5rem;
+    }
+}

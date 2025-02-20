@@ -1,0 +1,16 @@
+.btn-custom {
+    border: 1px solid white;
+    color: white;
+    padding: 0.8rem 2rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin: 0.5rem;
+    transition: background-color 0.3s, color 0.3s, transform 0.3s;
+    display: inline-block;
+}
+
+.btn-custom:hover {
+    background-color: white;
+    color: black;
+    transform: scale(1.05);
+}

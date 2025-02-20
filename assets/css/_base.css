@@ -1,0 +1,38 @@
+body {
+    background-image: url('../public/bg.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    height: 100vh;
+    margin: 0;
+    color: white;
+    font-family: 'Arial', sans-serif;
+    overflow-x: hidden;
+    animation: fadeIn 2s ease-in-out;
+}
+.translucent-box-up {
+    background-color: hsla(0, 0%, 0%, 0.75); /* Fondo translúcido */
+  
+    padding: 20px;
+    border-radius:  0 0 50% 50% / 50% 50% 0 0; /* Curva convexa en la parte superior */
+    
+    position: relative;
+    overflow: hidden;
+}
+
+.translucent-box-down {
+    background: linear-gradient(
+        to bottom, 
+        hsla(0, 0%, 0%, 0.75), 
+        hsla(0, 0%, 0%, 1)
+    );
+    color: white;
+    padding: 20px;
+    
+    position: relative;
+    overflow: hidden;
+    
+}
+
+
+/* Otras reglas generales si las tienes */
